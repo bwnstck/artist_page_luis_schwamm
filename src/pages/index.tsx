@@ -18,7 +18,12 @@ export default function Index() {
       <div className="container">
         <div>
           <Title>{authorName} 👋</Title>
-          <Image src={'profilePicture.jpg'} width={500} height={500} />
+          <Image
+            src={'profilePicture.jpg'}
+            width={500}
+            height={500}
+            alt="Ich bins, Luis"
+          />
           <Paragraph>{authorDescription}</Paragraph>
           <SocialList />
         </div>
