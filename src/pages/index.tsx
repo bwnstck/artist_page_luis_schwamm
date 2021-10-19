@@ -5,7 +5,7 @@ import TwitterCardMeta from '../components/meta/TwitterCardMeta'
 import { SocialList } from '../components/SocialList'
 import styled from 'styled-components'
 import { getAuthor } from '../lib/authors'
-import Image from 'next/image'
+// import Image from 'next/image'
 
 export default function Index() {
   const authorName = getAuthor('luis').name
@@ -18,12 +18,12 @@ export default function Index() {
       <div className="container">
         <div>
           <Title>{authorName} 👋</Title>
-          <Image
+          {/* <Image
             src={'profilePicture.jpg'}
             width={500}
             height={500}
             alt="Ich bins, Luis"
-          />
+          /> */}
           <Paragraph>{authorDescription}</Paragraph>
           <SocialList />
         </div>
