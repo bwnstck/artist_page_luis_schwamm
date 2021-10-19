@@ -5,7 +5,7 @@ import TwitterCardMeta from '../components/meta/TwitterCardMeta'
 import { SocialList } from '../components/SocialList'
 import styled from 'styled-components'
 import { getAuthor } from '../lib/authors'
-// import Image from 'next/image'
+import Image from 'next/image'
 
 export default function Index() {
   const authorName = getAuthor('luis').name
@@ -13,17 +13,22 @@ export default function Index() {
   return (
     <Layout>
       <BasicMeta url={'/'} />
-      {/* <OpenGraphMeta url={'/'} /> */}
+      <OpenGraphMeta url={'/'} />
       {/* <TwitterCardMeta url={'/'} /> */}
       <div className="container">
         <div>
           <Title>{authorName} 👋</Title>
-          {/* <Image
-            src={'profilePicture.jpg'}
-            width={500}
-            height={500}
+          <Image
+            layout="responsive"
+            src={'/images/profilePicture.jpg'}
             alt="Ich bins, Luis"
-          /> */}
+            width={1920}
+            height={1440}
+            // width={500}  automatically provided
+            // height={500}  automatically provided
+            // blurDataURL="data:..." automatically provided
+            // placeholder="blur" // Optional blur-up while loading
+          />
           <Paragraph>{authorDescription}</Paragraph>
           <SocialList />
         </div>
