@@ -89,6 +89,32 @@ collections:
                 name: 'name'
                 widget: 'string'
                 hint: 'Tag name for displaying on the site'
+  - name: 'pages'
+    label: 'Pages'
+    delete: false
+    editor:
+      preview: false
+    files:
+      - name: 'sections'
+        label: 'Sections'
+        file: 'meta/sections.yml'
+        description: 'Sections of Onepager'
+        fields:
+          - name: sections
+            label: Sections
+            label_singular: 'Section'
+            widget: list
+            fields:
+              - label: 'Title'
+                name: 'title'
+                widget: 'string'
+                hint: 'The Headline of the Section'
+              - label: 'Text 1'
+                name: 'text1'
+                widget: 'string'
+              - label: 'Text 2'
+                name: 'text2'
+                widget: 'text'
 
   - name: 'posts'
     label: 'Posts'
