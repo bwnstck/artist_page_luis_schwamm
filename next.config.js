@@ -1,4 +1,16 @@
 module.exports = {
+  exportPathMap: async function (
+    defaultPathMap,
+    { dev, dir, outDir, distDir, buildId }
+  ) {
+    return {
+      '/': { page: '/' },
+    }
+  },
+  images: {
+    loader: 'imgix',
+    path: '',
+  },
   pageExtensions: ['tsx'],
   webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
     config.module.rules.push(
