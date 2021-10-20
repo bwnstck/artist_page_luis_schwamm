@@ -22,6 +22,4 @@ export default function Index() {
   )
 }
 
-const Container = styled.div`
-  /* background-color: red; */
-`
+const Container = styled.div``

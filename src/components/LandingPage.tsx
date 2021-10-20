@@ -1,28 +1,33 @@
 import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import { getAuthor } from '../lib/authors'
-const authorName = getAuthor('luis').name
 import Image from 'next/image'
 
 function LandingPage() {
   const authorName = getAuthor('luis').name
   const authorDescription = getAuthor('luis').introduction
+
   const iFrameSrc =
     'https://bandcamp.com/EmbeddedPlayer/album=1522687561/size=large/bgcol=ffffff/linkcol=f171a2/tracklist=false/artwork=small/transparent=true/'
 
+  const imageWidth = 400
+  const imageHeight = imageWidth
+
   return (
     <BackgroundImage>
-      <Title>{authorName} 👋</Title>
+      <Title>{authorName}</Title>
       <ImageWrapper>
-        <StyledImage
+        <Image
           src={'/images/Profilbild.png'}
           alt="Das ist Luis"
-          width={253}
-          height={256}
-          placeholder="blur"
+          width={imageWidth}
+          height={imageHeight}
+          loading={'lazy'}
         />
       </ImageWrapper>
-      <Paragraph>{authorDescription}</Paragraph>
+
+      {authorDescription && <Paragraph>{authorDescription}</Paragraph>}
+
       <Player>
         <iframe src={iFrameSrc} seamless>
           <a href="https://luisschwamm.bandcamp.com/album/m-ngel">
@@ -37,45 +42,49 @@ function LandingPage() {
 
 export default LandingPage
 
-const Player = styled.div`
-  height: 120px;
-  padding: 5px;
-  border-radius: 10px;
-  background-color: white;
-  margin: 0 auto;
-  > iframe {
-    width: 100%;
-    height: 120px;
-    border: 0;
-  }
-`
-const StyledImage = styled(Image)`
-  border-radius: 50%;
-`
-
-const ImageWrapper = styled.div`
-  /* max-width: 800px; */
-  margin: 0 auto;
-`
 const BackgroundImage = styled.div`
   width: 100vw;
   height: 100vh;
   background-image: url('/images/landing.jpg');
   background-position: center;
   background-size: cover;
-  padding: 10% 0;
+  padding: 0 20px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
 `
 const Title = styled.h1`
-  font-size: 3rem;
   text-align: center;
-  color: #ef4189;
-  box-shadow: 10;
+  padding: 0;
 `
+const ImageWrapper = styled.div`
+  width: 90%;
+  text-align: center;
+  margin: 0 auto;
+
+  > div {
+    :hover {
+      transform: scale(1.1);
+    }
+  }
+`
+
+const Player = styled.div`
+  width: 90%;
+  max-width: 500px;
+  /* height: 120px; */
+  /* border-radius: 10px; */
+  /* background-color: white; */
+  margin: 0 auto;
+
+  > iframe {
+    border: 0;
+    width: 100%;
+    height: 120px;
+  }
+`
+
 const Paragraph = styled.p`
-  font-size: 1.5em;
   text-align: center;
   color: peachpuff;
 `
