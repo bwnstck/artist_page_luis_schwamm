@@ -5,4 +5,6 @@ authors:
       Python / Golang / React
   - slug: luis
     name: Luis Schwamm
-    introduction: Hallo, ich bins! Euer Lieblingsmusiker 👋
+    introduction: |-
+      Hallo, ich bins!
+      Euer Lieblingsmusiker 👋
