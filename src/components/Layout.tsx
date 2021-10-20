@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import styled from 'styled-components'
 import Navigation from './Navigation'
 
 type Props = {
@@ -17,7 +18,16 @@ export default function Layout({ children }: Props) {
       <nav>
         <Navigation />
       </nav>
-      <main>{children}</main>
+      <Wrapper>{children}</Wrapper>
     </div>
   )
 }
+
+const Wrapper = styled.main`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+`
