@@ -3,7 +3,7 @@ import BasicMeta from '../components/meta/BasicMeta'
 import OpenGraphMeta from '../components/meta/OpenGraphMeta'
 
 import styled from 'styled-components'
-import LandingPage from '../components/LandingPage'
+import LandingPage from './LandingPage'
 
 export default function Index() {
   return (

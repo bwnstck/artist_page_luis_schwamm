@@ -7,10 +7,6 @@ module.exports = {
       '/': { page: '/' },
     }
   },
-  images: {
-    loader: 'imgix',
-    path: '',
-  },
   pageExtensions: ['tsx'],
   webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
     config.module.rules.push(

@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import Image from 'next/image'
 import { useState } from 'react'
+import profilePic from '../../public/images/Vector.png'
 
 export default function Navigation() {
   // const router = useRouter()
@@ -19,13 +20,7 @@ export default function Navigation() {
         </MenuWrapper>
       )}
       <ButtonWrapper onClick={handleOnClick}>
-        <MenuMan
-          src={'/images/Vector.png'}
-          alt="Das ist das Menü"
-          width={48}
-          height={48}
-          placeholder="blur"
-        />
+        <MenuMan src={profilePic} alt="Das ist das Menü" />
       </ButtonWrapper>
     </>
   )

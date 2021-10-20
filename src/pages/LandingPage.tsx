@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import { getAuthor } from '../lib/authors'
 import Image from 'next/image'
+import profilePicture from '../../public/images/Profilbild.png'
 
 function LandingPage() {
   const authorName = getAuthor('luis').name
@@ -9,20 +10,11 @@ function LandingPage() {
   const iFrameSrc =
     'https://bandcamp.com/EmbeddedPlayer/album=1522687561/size=large/bgcol=ffffff/linkcol=f171a2/tracklist=false/artwork=small/transparent=true/'
 
-  const imageWidth = 400
-  const imageHeight = imageWidth
-
   return (
     <BackgroundImage>
       <Title>{authorName}</Title>
       <ImageWrapper>
-        <Image
-          src={'/images/Profilbild.png'}
-          alt="Das ist Luis"
-          width={imageWidth}
-          height={imageHeight}
-          loading={'lazy'}
-        />
+        <Image src={profilePicture} alt="Das ist Luis" />
       </ImageWrapper>
 
       {authorDescription && <Paragraph>{authorDescription}</Paragraph>}
