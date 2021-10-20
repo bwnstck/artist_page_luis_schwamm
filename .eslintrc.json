@@ -1,0 +1,14 @@
+{
+  "extends": [
+    "next",
+    "eslint:recommended",
+    "next/core-web-vitals",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "rules": {
+    "react/react-in-jsx-scope": 0,
+    "no-console": 1,
+    "indent": ["error", 2]
+  }
+}

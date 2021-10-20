@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import { getAuthor } from '../lib/authors'
 import Image from 'next/image'
@@ -72,9 +72,6 @@ const ImageWrapper = styled.div`
 const Player = styled.div`
   width: 90%;
   max-width: 500px;
-  /* height: 120px; */
-  /* border-radius: 10px; */
-  /* background-color: white; */
   margin: 0 auto;
 
   > iframe {

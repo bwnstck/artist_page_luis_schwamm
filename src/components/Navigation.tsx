@@ -6,7 +6,7 @@ export default function Navigation() {
   // const router = useRouter()
   const [active, setActive] = useState(false)
   const handleOnClick = () => setActive(!active)
-  console.log({ active })
+
   return (
     <>
       {active && (

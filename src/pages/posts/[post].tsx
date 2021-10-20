@@ -25,7 +25,7 @@ export type Props = {
 
 const components = { InstagramEmbed, YouTube, TwitterTweetEmbed };
 const slugToPostContent = (postContents => {
-  let hash = {}
+  const hash = {}
   postContents.forEach(it => hash[it.slug] = it)
   return hash;
 })(fetchPostContent());
