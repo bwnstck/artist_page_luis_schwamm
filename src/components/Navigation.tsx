@@ -5,17 +5,20 @@ import { useState } from 'react'
 export default function Navigation() {
   // const router = useRouter()
   const [active, setActive] = useState(false)
-  const handleOnPress = () => setActive(!active)
+  const handleOnClick = () => setActive(!active)
   console.log({ active })
   return (
     <>
       {active && (
-        <MenuWrapper>
+        <MenuWrapper onClick={handleOnClick}>
           <h2>MENU</h2>
+          <ul>
+            <li>Ich bins 👨‍🎤</li>
+          </ul>
           {}
         </MenuWrapper>
       )}
-      <ButtonWrapper onClick={handleOnPress}>
+      <ButtonWrapper onClick={handleOnClick}>
         <MenuMan
           src={'/images/Vector.png'}
           alt="Das ist das Menü"
@@ -41,7 +44,7 @@ const MenuWrapper = styled.div`
   border-radius: 10px;
   padding: 16px;
 
-  h2 {
+  > * {
     color: white;
   }
 `

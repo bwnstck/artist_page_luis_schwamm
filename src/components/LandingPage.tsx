@@ -1,13 +1,14 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import { getAuthor } from '../lib/authors'
 const authorName = getAuthor('luis').name
-import { SocialList } from '../components/SocialList'
 import Image from 'next/image'
 
 function LandingPage() {
   const authorName = getAuthor('luis').name
   const authorDescription = getAuthor('luis').introduction
+  const iFrameSrc =
+    'https://bandcamp.com/EmbeddedPlayer/album=1522687561/size=large/bgcol=ffffff/linkcol=f171a2/tracklist=false/artwork=small/transparent=true/'
 
   return (
     <BackgroundImage>
@@ -23,10 +24,7 @@ function LandingPage() {
       </ImageWrapper>
       <Paragraph>{authorDescription}</Paragraph>
       <Player>
-        <iframe
-          src="https://bandcamp.com/EmbeddedPlayer/album=1522687561/size=large/bgcol=ffffff/linkcol=f171a2/tracklist=false/artwork=small/transparent=true/"
-          seamless
-        >
+        <iframe src={iFrameSrc} seamless>
           <a href="https://luisschwamm.bandcamp.com/album/m-ngel">
             Mängel by Luis Schwamm
           </a>
@@ -46,7 +44,7 @@ const Player = styled.div`
   background-color: white;
   margin: 0 auto;
   > iframe {
-    width: 400px;
+    width: 100%;
     height: 120px;
     border: 0;
   }
@@ -71,7 +69,7 @@ const BackgroundImage = styled.div`
   justify-content: center;
 `
 const Title = styled.h1`
-  font-size: 4.5em;
+  font-size: 3rem;
   text-align: center;
   color: #ef4189;
   box-shadow: 10;

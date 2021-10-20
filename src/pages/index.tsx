@@ -16,6 +16,7 @@ export default function Index() {
       {/* <TwitterCardMeta url={'/'} /> */}
       <Container>
         <LandingPage />
+        <LandingPage />
       </Container>
     </Layout>
   )
