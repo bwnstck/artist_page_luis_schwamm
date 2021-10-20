@@ -1,4 +1,3 @@
-import React from 'react'
 import styled from 'styled-components'
 import { getAuthor } from '../lib/authors'
 import Image from 'next/image'
