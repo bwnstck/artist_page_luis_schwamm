@@ -4,7 +4,7 @@ backend:
 media_folder: public/images
 site_url: https://luis-schwamm.weinstock.it
 display_url: Super Website
-logo_url: https://weinstock.it/static/media/avatar.95e06090.svg
+logo_url: /icon.png
 public_folder: /images
 # publish_mode: editorial_workflow
 locale: 'de'

@@ -2,7 +2,7 @@ import Layout from '$components/Layout'
 import BasicMeta from '$components/meta/BasicMeta'
 import OpenGraphMeta from '$components/meta/OpenGraphMeta'
 
-import LandingPage from './LandingPage'
+import Home from './Home'
 
 export default function Index() {
   return (
@@ -11,8 +11,8 @@ export default function Index() {
       <OpenGraphMeta url={'/'} />
       {/* <TwitterCardMeta url={'/'} /> */}
       <div>
-        <LandingPage />
-        <LandingPage />
+        <Home />
+        <Home />
       </div>
     </Layout>
   )

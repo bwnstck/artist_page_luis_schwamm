@@ -1,8 +1,9 @@
-import { AuthorContent } from '$lib/authors'
+import { AuthorContent } from '$types/data'
 
 type Props = {
   author: AuthorContent
 }
+
 export default function Author({ author }: Props) {
   return (
     <>
