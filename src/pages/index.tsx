@@ -1,10 +1,8 @@
-import Layout from '../components/Layout'
-import BasicMeta from '../components/meta/BasicMeta'
-import OpenGraphMeta from '../components/meta/OpenGraphMeta'
+import Layout from '$components/Layout'
+import BasicMeta from '$components/meta/BasicMeta'
+import OpenGraphMeta from '$components/meta/OpenGraphMeta'
 
 import LandingPage from './LandingPage'
-
-import styled from 'styled-components'
 
 export default function Index() {
   return (
@@ -12,12 +10,10 @@ export default function Index() {
       <BasicMeta url={'/'} />
       <OpenGraphMeta url={'/'} />
       {/* <TwitterCardMeta url={'/'} /> */}
-      <Container>
+      <div>
         <LandingPage />
         <LandingPage />
-      </Container>
+      </div>
     </Layout>
   )
 }
-
-const Container = styled.div``

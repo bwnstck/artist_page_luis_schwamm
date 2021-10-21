@@ -1,17 +1,20 @@
 import InstagramEmbed from 'react-instagram-embed'
 import { TwitterTweetEmbed } from 'react-twitter-embed'
 import YouTube from 'react-youtube'
-import { parseISO } from 'date-fns'
-import fs from 'fs'
-import matter from 'gray-matter'
-import yaml from 'js-yaml'
+
 import { GetStaticPaths, GetStaticProps } from 'next'
 import hydrate from 'next-mdx-remote/hydrate'
 import renderToString from 'next-mdx-remote/render-to-string'
 import { MdxRemote } from 'next-mdx-remote/types'
 
-import PostLayout from '../../components/PostLayout'
-import { fetchPostContent } from '../../lib/posts'
+import { parseISO } from 'date-fns'
+import fs from 'fs'
+import matter from 'gray-matter'
+import yaml from 'js-yaml'
+
+import PostLayout from '$components/PostLayout'
+
+import { fetchPostContent } from '$lib/posts'
 
 export type Props = {
   title: string

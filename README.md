@@ -111,3 +111,19 @@ as following instructions:
 ## License
 
 MIT
+
+## Hints
+
+### Variable Import Names
+
+If you want to implement more import variables like `import Landingpage from '$pages/LandingPage' ` here is a simple regex for using search and replace in VS-Code:
+
+```
+Search for:
+\'..*\/pages/\
+
+Replace with:
+'$pages/
+```
+
+So it would find a path like `'../../../assets/randomAsset.jpg'` or `'../assets/randomSecondAsset.gif'` and replaces it with `'$/assets/randomAsset.jpg'` / `'$/assets/randomSecondAsset.gif'`

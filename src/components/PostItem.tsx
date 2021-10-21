@@ -1,7 +1,8 @@
-import { parseISO } from 'date-fns'
 import Link from 'next/link'
 
-import { PostContent } from '../lib/posts'
+import { parseISO } from 'date-fns'
+
+import { PostContent } from '$lib/posts'
 
 import Date from './Date'
 

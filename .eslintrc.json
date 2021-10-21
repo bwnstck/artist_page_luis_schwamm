@@ -16,26 +16,26 @@
       {
         "groups": [
           // External Packages.
-          // Packages related to `react` come first then packages that start with a letter or `@` followed by a letter.
-          ["^react", "^@?\\w"],
+          // Packages related to `react` and `next` come first then packages that start with a letter or `@` followed by a letter.
+          ["^react"],
+          ["^next"],
+          ["^@?\\w"],
+
           // Internal packages.
           ["^\\$components"],
-          ["^\\$screens"],
+          ["^\\$pages"],
           ["^\\$services"],
-          ["^\\u0000\\$"],
-          [
-            "^\\$config",
-            "^\\$navigation",
-            "^\\$test",
-            "^\\$theme",
-            "^\\$utils"
-          ],
+          ["^\\$config", "^\\$lib", "^\\$test", "^\\$theme", "^\\$utils"],
+
           // Side effect imports. The 'react-test-renderer' must be required after 'react-native'.
-          ["^\\u0000", "^\\u0000react-native", "^react-test-renderer"],
+          // ["^\\u0000", "^\\u0000react-native", "^react-test-renderer"],
+
           // Parent imports. Put `..` last.
           ["^\\.\\.(?!/?$)", "^\\.\\./?$"],
+
           // Other relative imports. Put same-folder imports and `.` last.
           ["^\\./(?=.*/)(?!/?$)", "^\\.(?!/?$)", "^\\./?$"],
+
           // Assets and style imports.
           ["^styled", "^@?\\w", "^\\$assets", "^.+\\.s?css$", "^.+\\.styles$"]
         ]

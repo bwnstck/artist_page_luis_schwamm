@@ -1,8 +1,9 @@
 import React from 'react'
 
-import GitHub from '../assets/github-alt.svg'
-import Twitter from '../assets/twitter-alt.svg'
-import config from '../lib/config'
+import config from '$lib/config'
+
+import GitHub from '$assets/github-alt.svg'
+import Twitter from '$assets/twitter-alt.svg'
 
 export const SocialList = () => {
   return (

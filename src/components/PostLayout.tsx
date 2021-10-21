@@ -1,7 +1,7 @@
 import React from 'react'
 
-import { getAuthor } from '../lib/authors'
-import { getTag } from '../lib/tags'
+import { getAuthor } from '$lib/authors'
+import { getTag } from '$lib/tags'
 
 import BasicMeta from './meta/BasicMeta'
 import JsonLdMeta from './meta/JsonLdMeta'
@@ -14,7 +14,7 @@ import Layout from './Layout'
 import { SocialList } from './SocialList'
 import TagButton from './TagButton'
 
-import styles from '../../public/styles/content.module.css'
+import styles from '$styles/content.module.css'
 
 type Props = {
   title: string

@@ -1,4 +1,4 @@
-import { generatePagination } from '../lib/pagination'
+import { generatePagination } from '$lib/pagination'
 
 test('excerpt starting and ending page numbers', () => {
   const pagination = generatePagination(5, 8)
@@ -54,5 +54,3 @@ test('excerpt starting page numbers at last page', () => {
     { page: 8, current: true, excerpt: false },
   ])
 })
-
-export {}

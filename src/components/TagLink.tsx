@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-import { TagContent } from '../lib/tags'
+import { TagContent } from '$lib/tags'
 
 type Props = {
   tag: TagContent
