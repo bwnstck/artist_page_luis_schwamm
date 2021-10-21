@@ -2,10 +2,16 @@ backend:
   name: git-gateway
   branch: main
 media_folder: public/images
-site_url: https://luisschwamm.netlify.app/
+site_url: https://luis-schwamm.weinstock.it
+display_url: luis-schwamm.weinstock.it
+logo_url: /public/icon.png
 public_folder: /images
 # publish_mode: editorial_workflow
 locale: 'de'
+slug:
+  encoding: 'ascii'
+  clean_accents: true
+  sanitize_replacement: '_'
 
 collections:
   - name: 'config'

@@ -1,6 +1,9 @@
 import { createGlobalStyle } from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`
+
+/* VARIABLES */
+
   :root {
     --color-text: #FFDCAC;
     --color-background: #ADC7C6;
@@ -9,46 +12,49 @@ const GlobalStyle = createGlobalStyle`
     --background-color: grey;
   }
 
-/* REGULAR */
+/* FONTS */
+  /* Regular */
 @font-face {
   font-family: 'Montserrat';
-  src: url("$fonts/Montserrat/Montserrat-Regular.ttf");
+  src: url("/fonts/Montserrat/Montserrat-Regular.ttf");
   font-style:normal ;
   font-weight: 400;
   font-display: swap;
 }
 
-/* MEDIUM */
+/* Medium */
 @font-face {
   font-family: 'Montserrat';
-  src: url("$fonts/Montserrat/Montserrat-Medium.ttf");
+  src: url("/fonts/Montserrat/Montserrat-Medium.ttf");
   font-style:normal ;
   font-weight: 500;
   font-display: swap;
 }
 @font-face {
   font-family: 'Montserrat';
-  src: url("$fonts/Montserrat/Montserrat-MediumItalic.ttf");
+  src: url("/fonts/Montserrat/Montserrat-MediumItalic.ttf");
   font-style:italic ;
   font-weight: 500;
   font-display: swap;
 }
 
-/* BOLD */
+/* Bold */
   @font-face {
     font-family: 'Montserrat';
-    src: url("$fonts/Montserrat/Montserrat-Bold.ttf");
+    src: url("/fonts/Montserrat/Montserrat-Bold.ttf");
     font-style:normal ;
     font-weight: 700;
     font-display: swap;
   }
   @font-face {
     font-family: 'Montserrat';
-    src: url("$fonts/Montserrat/Montserrat-BoldItalic.ttf");
+    src: url("/fonts/Montserrat/Montserrat-BoldItalic.ttf");
     font-style:italic ;
     font-weight: 700;
     font-display: swap;
   }
+
+/* STYLE RESET */
 
   * {
     box-sizing: border-box;
@@ -56,11 +62,12 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
   }
-  
+
+  /* General Styles */
+
   html{
     background-color: var(--color-background);
     }
-
   body {
     margin:0;
     padding:0;
@@ -70,6 +77,8 @@ const GlobalStyle = createGlobalStyle`
     
     height: 100%;
     
+    /* Links */
+
     a {
       color: var(---secondary-color);
       text-decoration: none;
@@ -81,18 +90,30 @@ const GlobalStyle = createGlobalStyle`
       color: #000;
     }
 
-    h1{
+    /* Headings */
+
+    h1,h2,h3,h4,h5,h6{
       color: var(--primary-color);
+      margin: 1rem auto .5rem;
+      font-weight: 500;
+    }
+    
+    h1{
       font-weight: 700;
-      font-size: clamp(2.5rem, 5vw, 5rem);
-      margin: 1rem auto .5rem
+      font-size: clamp(2.5rem, 5vw, 4rem);
     }
     h2{
-      color: var(--primary-color);
-      font-weight: 500;
-      font-size: clamp(2rem, 5vw, 4.5rem);
-      margin: 1.75rem auto 0.75rem
+      font-size: clamp(2rem, 5vw, 3.5rem);
     }
+    h3{
+      font-size: clamp(1.5rem, 5vw, 3rem);
+    }
+    h4{
+      font-size: clamp(1rem, 5vw, 2.5rem);
+    }
+    
+    /* Text */
+    
     p {
       font-size: clamp(1rem, 5vw, 1.5rem);
       font-weight: 400;
