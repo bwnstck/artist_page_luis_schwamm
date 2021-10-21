@@ -2,6 +2,6 @@
 . "$(dirname "$0")/_/husky.sh"
 
 # checks if everyone uses prettier
-npx prettier --check .
+npx prettier -l --write . 
 # linting and adding the fixed files before comitting
 yarn eslint --ext .tsx,.ts . --fix && git add -A .

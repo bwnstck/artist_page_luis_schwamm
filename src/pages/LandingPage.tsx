@@ -1,26 +1,27 @@
 import Image from 'next/image'
 
-import { getAuthor } from '$lib/authors'
+import { AuthorContent, getData } from '$lib/authors'
+
+import authors from '../../meta/authors.yml'
 
 import styled from 'styled-components'
 
 import profilePicture from '$images/Profilbild.png'
 
 function LandingPage() {
-  const authorName = getAuthor('luis').name
-  const authorDescription = getAuthor('luis').introduction
+  const author = getData({ data: authors, slug: 'luis' }) as AuthorContent
 
   const iFrameSrc =
     'https://bandcamp.com/EmbeddedPlayer/album=1522687561/size=large/bgcol=ffffff/linkcol=f171a2/tracklist=false/artwork=small/transparent=true/'
 
   return (
     <BackgroundImage>
-      <Title>{authorName}</Title>
+      <Title>{author.name}</Title>
       <ImageWrapper>
         <Image src={profilePicture} alt="Das ist Luis" />
       </ImageWrapper>
 
-      {authorDescription && <Paragraph>{authorDescription}</Paragraph>}
+      {author?.introduction && <Paragraph>{author.introduction}</Paragraph>}
 
       <Player>
         <iframe src={iFrameSrc} seamless>

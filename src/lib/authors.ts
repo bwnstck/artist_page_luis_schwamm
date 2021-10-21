@@ -1,4 +1,4 @@
-import authors from '../../meta/authors.yml'
+/* eslint-disable @typescript-eslint/no-explicit-any */
 
 export type AuthorContent = {
   readonly slug: string
@@ -6,16 +6,20 @@ export type AuthorContent = {
   readonly introduction: string
 }
 
-const authorMap: { [key: string]: AuthorContent } = generateAuthorMap()
+export const generateDataMap = (data) => {
+  const result: { [key: string]: any } = {}
 
-function generateAuthorMap(): { [key: string]: AuthorContent } {
-  const result: { [key: string]: AuthorContent } = {}
-  for (const author of authors.authors) {
-    result[author.slug] = author
+  const directData = data[Object.keys(data)[0]]
+
+  for (const entry of directData) {
+    result[entry.slug] = entry
   }
   return result
 }
 
-export function getAuthor(slug: string) {
-  return authorMap[slug]
+export const getData = ({ data, slug }: { data: any; slug?: string }) => {
+  if (slug) {
+    return generateDataMap(data)[slug]
+  }
+  return generateDataMap(data)
 }
