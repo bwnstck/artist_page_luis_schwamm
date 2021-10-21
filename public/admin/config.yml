@@ -3,8 +3,8 @@ backend:
   branch: main
 media_folder: public/images
 site_url: https://luis-schwamm.weinstock.it
-display_url: Super Website
-logo_url: /icon.png
+display_url: luisschwamm.de
+logo_url: /images/Profilbild.png # Logo used in CMS
 public_folder: /images
 # publish_mode: editorial_workflow
 locale: 'de'
