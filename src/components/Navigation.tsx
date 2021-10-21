@@ -1,7 +1,9 @@
-import styled from 'styled-components'
-import Image from 'next/image'
 import { useState } from 'react'
+import Image from 'next/image'
+
 import profilePic from '../../public/images/Vector.png'
+
+import styled from 'styled-components'
 
 export default function Navigation() {
   // const router = useRouter()

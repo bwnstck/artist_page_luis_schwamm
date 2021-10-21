@@ -1,17 +1,17 @@
-import { GetStaticProps, GetStaticPaths } from 'next'
+import InstagramEmbed from 'react-instagram-embed'
+import { TwitterTweetEmbed } from 'react-twitter-embed'
+import YouTube from 'react-youtube'
+import { parseISO } from 'date-fns'
+import fs from 'fs'
+import matter from 'gray-matter'
+import yaml from 'js-yaml'
+import { GetStaticPaths, GetStaticProps } from 'next'
+import hydrate from 'next-mdx-remote/hydrate'
 import renderToString from 'next-mdx-remote/render-to-string'
 import { MdxRemote } from 'next-mdx-remote/types'
-import hydrate from 'next-mdx-remote/hydrate'
-import matter from 'gray-matter'
-import { fetchPostContent } from '../../lib/posts'
-import fs from 'fs'
-import yaml from 'js-yaml'
-import { parseISO } from 'date-fns'
-import PostLayout from '../../components/PostLayout'
 
-import InstagramEmbed from 'react-instagram-embed'
-import YouTube from 'react-youtube'
-import { TwitterTweetEmbed } from 'react-twitter-embed'
+import PostLayout from '../../components/PostLayout'
+import { fetchPostContent } from '../../lib/posts'
 
 export type Props = {
   title: string

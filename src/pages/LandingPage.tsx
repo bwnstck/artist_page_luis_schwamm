@@ -1,7 +1,9 @@
-import styled from 'styled-components'
-import { getAuthor } from '../lib/authors'
 import Image from 'next/image'
+
 import profilePicture from '../../public/images/Profilbild.png'
+import { getAuthor } from '../lib/authors'
+
+import styled from 'styled-components'
 
 function LandingPage() {
   const authorName = getAuthor('luis').name

@@ -2,8 +2,9 @@ import Layout from '../components/Layout'
 import BasicMeta from '../components/meta/BasicMeta'
 import OpenGraphMeta from '../components/meta/OpenGraphMeta'
 
-import styled from 'styled-components'
 import LandingPage from './LandingPage'
+
+import styled from 'styled-components'
 
 export default function Index() {
   return (
