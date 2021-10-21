@@ -20,6 +20,10 @@
             "rootPathSuffix": "./public/styles"
           },
           {
+            "rootPathPrefix": "$fonts/",
+            "rootPathSuffix": "./public/fonts"
+          },
+          {
             "rootPathPrefix": "$lib/",
             "rootPathSuffix": "./src/lib"
           },

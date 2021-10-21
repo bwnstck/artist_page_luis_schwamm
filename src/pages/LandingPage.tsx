@@ -77,5 +77,4 @@ const Player = styled.div`
 
 const Paragraph = styled.p`
   text-align: center;
-  color: peachpuff;
 `
