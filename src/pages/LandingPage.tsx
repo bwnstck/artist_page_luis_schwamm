@@ -1,12 +1,12 @@
 import Image from 'next/image'
 
-import { AuthorContent, getData } from '$lib/authors'
-
-import authors from '../../meta/authors.yml'
+import { getData } from '$lib/data'
 
 import styled from 'styled-components'
 
 import profilePicture from '$images/Profilbild.png'
+import authors from '$meta/authors.yml'
+import { AuthorContent } from '$types/data'
 
 function LandingPage() {
   const author = getData({ data: authors, slug: 'luis' }) as AuthorContent

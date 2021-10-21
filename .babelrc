@@ -28,6 +28,14 @@
             "rootPathSuffix": "./src/lib"
           },
           {
+            "rootPathPrefix": "$types/",
+            "rootPathSuffix": "./src/types"
+          },
+          {
+            "rootPathPrefix": "$meta/",
+            "rootPathSuffix": "./meta"
+          },
+          {
             "rootPathPrefix": "$assets/",
             "rootPathSuffix": "./src/assets"
           },

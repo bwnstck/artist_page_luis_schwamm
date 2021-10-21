@@ -1,11 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
-export type AuthorContent = {
-  readonly slug: string
-  readonly name: string
-  readonly introduction: string
-}
-
 export const generateDataMap = (data) => {
   const result: { [key: string]: any } = {}
 
