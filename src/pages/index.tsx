@@ -3,6 +3,7 @@ import BasicMeta from '$components/meta/BasicMeta'
 import OpenGraphMeta from '$components/meta/OpenGraphMeta'
 
 import Home from './Home'
+import Social from './Social'
 
 export default function Index() {
   return (
@@ -12,7 +13,7 @@ export default function Index() {
       {/* <TwitterCardMeta url={'/'} /> */}
       <div>
         <Home />
-        <Home />
+        <Social />
       </div>
     </Layout>
   )

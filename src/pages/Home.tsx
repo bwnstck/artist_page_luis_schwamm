@@ -1,5 +1,7 @@
 import Image from 'next/image'
 
+import ImageContainer from '$components/ImageContainer'
+
 import { getData } from '$lib/data'
 
 import styled from 'styled-components'
@@ -15,7 +17,7 @@ function LandingPage() {
     'https://bandcamp.com/EmbeddedPlayer/album=1522687561/size=large/bgcol=ffffff/linkcol=f171a2/tracklist=false/artwork=small/transparent=true/'
 
   return (
-    <BackgroundImage>
+    <ImageContainer backgroundUrl={'/images/landing.jpg'}>
       <Title>{author.name}</Title>
       <ImageWrapper>
         <Image src={profilePicture} alt="Das ist Luis" />
@@ -31,23 +33,12 @@ function LandingPage() {
         </iframe>
       </Player>
       {/* <SocialList /> */}
-    </BackgroundImage>
+    </ImageContainer>
   )
 }
 
 export default LandingPage
 
-const BackgroundImage = styled.div`
-  width: 100vw;
-  height: 100vh;
-  background-image: url('/images/landing.jpg');
-  background-position: center;
-  background-size: cover;
-  padding: 0 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-`
 const Title = styled.h1`
   text-align: center;
   padding: 0;
