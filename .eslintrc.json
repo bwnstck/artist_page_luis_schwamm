@@ -6,6 +6,7 @@
     "plugin:react/recommended",
     "plugin:@typescript-eslint/recommended"
   ],
+  "plugins": ["simple-import-sort"],
   "rules": {
     "react/react-in-jsx-scope": 0,
     "no-console": 1,

@@ -1,13 +1,11 @@
 module.exports = {
-  exportPathMap: async function (
-    defaultPathMap,
-    { dev, dir, outDir, distDir, buildId }
-  ) {
+  exportPathMap: async function (defaultPathMap) {
     return {
-      '/': { page: '/' },
+      defaultPathMap,
     }
   },
   pageExtensions: ['tsx'],
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
     config.module.rules.push(
       ...[
