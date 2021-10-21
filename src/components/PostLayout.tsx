@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { getAuthor } from '$lib/authors'
+import { getData } from '$lib/data'
 import { getTag } from '$lib/tags'
 
 import BasicMeta from './meta/BasicMeta'
@@ -15,6 +15,8 @@ import { SocialList } from './SocialList'
 import TagButton from './TagButton'
 
 import styles from '$styles/content.module.css'
+
+import authors from '$meta/authors.yml'
 
 type Props = {
   title: string
@@ -35,7 +37,8 @@ export default function PostLayout({
   children,
 }: Props) {
   const keywords = tags.map((it) => getTag(it).name)
-  const authorName = getAuthor(author).name
+  const authorData = getData({ data: authors, slug: author })
+  const authorName = getData({ data: authors, slug: author }).name
   return (
     <Layout>
       <BasicMeta
@@ -71,7 +74,7 @@ export default function PostLayout({
                 <Date date={date} />
               </div>
               <div>
-                <Author author={getAuthor(author)} />
+                <Author author={authorData} />
               </div>
             </div>
           </header>
