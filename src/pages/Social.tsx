@@ -149,7 +149,7 @@ export default Social
 const Title = styled.h1`
   position: absolute;
 
-  top: calc(100vh + 25vh);
+  top: 25vh;
   right: clamp(20px, 5vw, 350px);
   transform: rotate(18deg);
   color: var(--color-text);
@@ -157,8 +157,7 @@ const Title = styled.h1`
 
 const IconContainer = styled.div`
   position: absolute;
-  top: calc(100vh + 38vh);
-  /* left: clamp(10vw, 5vw, -2vw); */
+  top: clamp(15vh, 100vw, 35vh);
   left: 20vw;
 
   display: grid;
@@ -173,7 +172,6 @@ const IconContainer = styled.div`
   transform: rotate(18deg);
 
   padding: 1em;
-  /* margin: 1rem; */
 `
 
 const BaseIcon = styled.a`

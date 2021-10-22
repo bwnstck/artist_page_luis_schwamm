@@ -11,6 +11,7 @@ const ImageContainer = styled.div<bgImageProps>`
   background-size: cover;
   padding: 0 20px;
   overflow: hidden;
+  position: relative;
 `
 
 export default ImageContainer
