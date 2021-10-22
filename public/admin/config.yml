@@ -101,26 +101,29 @@ collections:
     editor:
       preview: false
     files:
-      - name: 'sections'
-        label: 'Sections'
-        file: 'meta/sections.yml'
-        description: 'Sections of Onepager'
+      - name: 'social'
+        label: 'Social Page'
+        file: 'meta/social.yml'
+        description: 'Social Section on Page'
         fields:
-          - name: sections
-            label: Sections
-            label_singular: 'Section'
-            widget: list
-            fields:
-              - label: 'Title'
-                name: 'title'
-                widget: 'string'
-                hint: 'The Headline of the Section'
-              - label: 'Text 1'
-                name: 'text1'
-                widget: 'string'
-              - label: 'Text 2'
-                name: 'text2'
-                widget: 'text'
+          - name: bandcamp
+            label: Bandcamp
+            widget: 'string'
+          - name: spotify
+            label: Spotify
+            widget: 'string'
+          - name: youtube
+            label: YouTube
+            widget: 'string'
+          - name: soundcloud
+            label: SoundCloud
+            widget: 'string'
+          - name: insta
+            label: Instagram
+            widget: 'string'
+          - name: facebook
+            label: Facebook
+            widget: 'string'
 
   - name: 'posts'
     label: 'Posts'
