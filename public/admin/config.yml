@@ -15,13 +15,13 @@ slug:
 
 collections:
   - name: 'config'
-    label: 'Config'
+    label: 'Einstellungen'
     delete: false
     editor:
       preview: false
     files:
       - name: 'general'
-        label: 'Site Config'
+        label: 'Website Einstellungen'
         file: 'config.json'
         description: 'General site settings'
         fields:
@@ -49,13 +49,6 @@ collections:
           - label: 'GitHub account'
             name: 'github_account'
             widget: 'string'
-
-  - name: 'meta'
-    label: 'Meta'
-    delete: false
-    editor:
-      preview: false
-    files:
       - name: 'authors'
         label: 'Authors'
         file: 'meta/authors.yml'
@@ -77,24 +70,25 @@ collections:
               - label: 'Introduction'
                 name: 'introduction'
                 widget: 'text'
-      - name: 'tags'
-        label: 'Tags'
-        file: 'meta/tags.yml'
-        description: 'List of tags'
-        fields:
-          - name: tags
-            label: Tags
-            label_singular: 'Tag'
-            widget: list
+          - name: 'tags'
+            label: 'Tags'
+            file: 'meta/tags.yml'
+            description: 'List of tags'
             fields:
-              - label: 'Slug'
-                name: 'slug'
-                widget: 'string'
-                hint: 'The part of a URL identifies the tag'
-              - label: 'Display Name'
-                name: 'name'
-                widget: 'string'
-                hint: 'Tag name for displaying on the site'
+              - name: tags
+                label: Tags
+                label_singular: 'Tag'
+                widget: list
+                fields:
+                  - label: 'Slug'
+                    name: 'slug'
+                    widget: 'string'
+                    hint: 'The part of a URL identifies the tag'
+                  - label: 'Display Name'
+                    name: 'name'
+                    widget: 'string'
+                    hint: 'Tag name for displaying on the site'
+
   - name: 'pages'
     label: 'Pages'
     delete: false
