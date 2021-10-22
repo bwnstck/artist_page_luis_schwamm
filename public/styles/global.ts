@@ -5,7 +5,7 @@ const GlobalStyle = createGlobalStyle`
 /* VARIABLES */
 
   :root {
-    --color-text: #FFDCAC;
+    --color-text: #f9f7f4;
     --color-background: #ADC7C6;
     --primary-color: #f171a2;
     --secondary-color: #FCAF45;
@@ -58,7 +58,7 @@ const GlobalStyle = createGlobalStyle`
 
   * {
     box-sizing: border-box;
-    transition: all 300ms ease-in-out;
+    /* transition: all 300ms ease-in-out; */
     margin: 0;
     padding: 0;
   }
@@ -117,6 +117,10 @@ const GlobalStyle = createGlobalStyle`
     p {
       font-size: clamp(1rem, 5vw, 1.5rem);
       font-weight: 400;
+      color: var(--color-text)
+    }
+    
+    span {
       color: var(--color-text)
     }
 

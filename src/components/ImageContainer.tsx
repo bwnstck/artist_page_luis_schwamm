@@ -10,9 +10,7 @@ const ImageContainer = styled.div<bgImageProps>`
   background-position: center;
   background-size: cover;
   padding: 0 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+  overflow: hidden;
 `
 
 export default ImageContainer

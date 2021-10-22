@@ -28,6 +28,8 @@
       "$images/*": ["public/images/*"],
       "$fonts/*": ["public/fonts/*"],
       "$styles/*": ["public/styles/*"],
+      "$public/*": ["public/*"],
+      "$icons/*": ["public/icons/*"],
       "$types/*": ["src/types/*"],
       "$meta/*": ["meta/*"],
       "$assets/*": ["src/assets/*"],

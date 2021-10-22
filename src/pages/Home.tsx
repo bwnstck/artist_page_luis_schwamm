@@ -10,14 +10,14 @@ import profilePicture from '$images/Profilbild.png'
 import authors from '$meta/authors.yml'
 import { AuthorContent } from '$types/data'
 
-function LandingPage() {
+const LandingPage = () => {
   const author = getData({ data: authors, slug: 'luis' }) as AuthorContent
 
   const iFrameSrc =
     'https://bandcamp.com/EmbeddedPlayer/album=1522687561/size=large/bgcol=ffffff/linkcol=f171a2/tracklist=false/artwork=small/transparent=true/'
 
   return (
-    <ImageContainer backgroundUrl={'/images/landing.jpg'}>
+    <PageWrapper backgroundUrl={'/images/landing.jpg'}>
       <Title>{author.name}</Title>
       <ImageWrapper>
         <Image src={profilePicture} alt="Das ist Luis" />
@@ -33,11 +33,17 @@ function LandingPage() {
         </iframe>
       </Player>
       {/* <SocialList /> */}
-    </ImageContainer>
+    </PageWrapper>
   )
 }
 
 export default LandingPage
+
+const PageWrapper = styled(ImageContainer)`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+`
 
 const Title = styled.h1`
   text-align: center;

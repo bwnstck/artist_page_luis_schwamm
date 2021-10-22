@@ -12,6 +12,14 @@
             "rootPathSuffix": "./src/components"
           },
           {
+            "rootPathPrefix": "$meta/",
+            "rootPathSuffix": "./meta"
+          },
+          {
+            "rootPathPrefix": "$public/",
+            "rootPathSuffix": "./public"
+          },
+          {
             "rootPathPrefix": "$images/",
             "rootPathSuffix": "./public/images"
           },
@@ -24,16 +32,16 @@
             "rootPathSuffix": "./public/fonts"
           },
           {
+            "rootPathPrefix": "$icons/",
+            "rootPathSuffix": "./public/icons"
+          },
+          {
             "rootPathPrefix": "$lib/",
             "rootPathSuffix": "./src/lib"
           },
           {
             "rootPathPrefix": "$types/",
             "rootPathSuffix": "./src/types"
-          },
-          {
-            "rootPathPrefix": "$meta/",
-            "rootPathSuffix": "./meta"
           },
           {
             "rootPathPrefix": "$assets/",
