@@ -90,16 +90,19 @@ collections:
                     hint: 'Tag name for displaying on the site'
 
   - name: 'pages'
-    label: 'Pages'
+    label: 'Seiten'
     delete: false
     editor:
       preview: false
     files:
       - name: 'social'
-        label: 'Social Page'
+        label: '[Unterseite] Soziales'
         file: 'meta/social.yml'
         description: 'Social Section on Page'
         fields:
+          - name: title
+            label: Titel
+            widget: 'string'
           - name: bandcamp
             label: Bandcamp
             widget: 'string'

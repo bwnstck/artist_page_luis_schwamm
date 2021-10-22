@@ -2,14 +2,13 @@ import ImageContainer from '../components/ImageContainer'
 
 import styled from 'styled-components'
 
+import social from '$meta/social.yml'
 const Social = () => {
-  // const author = getData({ data: authors, slug: 'luis' }) as AuthorContent
-
   return (
     <ImageContainer backgroundUrl={'/images/socialBackground.jpg'}>
-      <Title>Soziales</Title>
+      <Title>{social.title || 'Soziales'}</Title>
       <IconContainer>
-        <SpotifyIcon href="">
+        <SpotifyIcon href={social.spotify}>
           <svg
             aria-hidden="true"
             focusable="false"
@@ -27,7 +26,7 @@ const Social = () => {
           </svg>
           <span>hören ja?</span>
         </SpotifyIcon>
-        <BandCampIcon href="#">
+        <BandCampIcon href={social.bandcamp}>
           <svg
             aria-hidden="true"
             focusable="false"
@@ -45,7 +44,7 @@ const Social = () => {
           </svg>
           <span>kaufen pls</span>
         </BandCampIcon>
-        <YoutubeIcon href="">
+        <YoutubeIcon href={social.youtube}>
           <svg
             aria-hidden="true"
             focusable="false"
@@ -63,7 +62,7 @@ const Social = () => {
           </svg>
           <span>schau mal</span>
         </YoutubeIcon>
-        <FacebookIcon href="#">
+        <FacebookIcon href={social.facebook}>
           <svg
             aria-hidden="true"
             focusable="false"
@@ -81,7 +80,7 @@ const Social = () => {
           </svg>
           <span>lez b frens</span>
         </FacebookIcon>
-        <SoundCloudIcon href="#">
+        <SoundCloudIcon href={social.soundcloud}>
           <svg
             aria-hidden="true"
             focusable="false"
@@ -105,7 +104,7 @@ const Social = () => {
           </svg>
           <span>hören ja?</span>
         </SoundCloudIcon>
-        <InstaIcon href="#">
+        <InstaIcon href={social.insta}>
           <svg
             aria-hidden="true"
             focusable="false"
