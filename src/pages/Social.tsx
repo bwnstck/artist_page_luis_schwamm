@@ -157,21 +157,35 @@ const Title = styled.h1`
 
 const IconContainer = styled.div`
   position: absolute;
-  top: clamp(15vh, 100vw, 35vh);
-  left: 20vw;
-
+  top: 36%;
+  left: 25vw;
+  transform: rotate(18deg);
+  padding: 1em;
   display: grid;
-  row-gap: 1rem;
+  row-gap: 0.5rem;
   grid-template-columns: repeat(8, 6vw);
-  grid-template-rows: repeat(3, 18vw);
+  grid-template-rows: repeat(3, 15vw);
   grid-template-areas:
     ' . bandcamp . . . . insta .  '
     '. . spotify . . soundcloud . .  '
     '. youtube . . . . facebook .  ';
 
-  transform: rotate(18deg);
-
-  padding: 1em;
+  @media (max-width: 768px) {
+    grid-template-rows: repeat(3, 24vw);
+    grid-template-areas:
+      ' . bandcamp . . . . insta .  '
+      'spotify . . . .  . . soundcloud '
+      '. youtube . . . . facebook .  ';
+  }
+  @media (min-width: 1100px) {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 600px;
+    > a {
+      margin: 2rem;
+    }
+  }
 `
 
 const BaseIcon = styled.a`
